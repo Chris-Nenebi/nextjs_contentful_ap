@@ -38,7 +38,8 @@ export  async function getStaticProps(context){
   // res is an array even though it returns only 1 item
   return {
     props:{
-      recipe:res.items[0]
+      recipe:res.items[0],
+      revalidate:1 //for ISR
     }
   }
 }
